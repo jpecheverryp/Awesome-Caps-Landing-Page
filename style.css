@@ -1,12 +1,108 @@
-body {
-    height: 200vh;
+/* Whole page styling */
+:root {
+    --nav-color: #9BA2FF;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 200vh;
+    background-color: #80DED9;
+}
+
+/* Header Styling Starts Here*/
+
 header {
-    background-color: rgb(177, 72, 209);
+    background-color: var(--nav-color);
     position: fixed;
-    top: 0px;
-    left: 0px;
     width: 100%;
-    height: 10vh;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Creating Hamburger Toggle*/
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    top: 7px;
+}
+
+.nav-toggle-label span::after {
+    bottom: 7px;
+}
+
+nav {
+    background-color: var(--nav-color);
+    width: 100%;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+nav a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
 }
