@@ -25,9 +25,23 @@ header {
     text-align: center;
 }
 
+.logo-img {
+    width: 64px;
+    height: auto;
+    display: none;
+}
+
 header h1 {
     color: white;
     font-weight: 800;
+    margin: 0 15px;
+}
+
+.logo-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
 }
 
 .nav-toggle {
@@ -113,9 +127,27 @@ nav a {
 
 /* Header Styling ends here*/
 
+
+/* First Section Styling */
+
+main {
+    position: relative;
+    top: 100px;
+}
+
+footer {
+    background-color: white;
+    position: relative;
+    top: 200px;
+}
+
 /* Media Queries start Here*/
 
 @media (min-width: 800px) {
+    .logo-img {
+        display: block;
+    }
+
     .nav-toggle-label {
         display: none;
     }
@@ -124,7 +156,7 @@ nav a {
         display: grid;
         grid-template-columns: 1fr auto minmax(550px, 3fr) 1fr;
     }
-    header h1 {
+    .logo-div {
         grid-column: 2 / 3;
     }
     nav {
