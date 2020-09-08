@@ -8,7 +8,7 @@
 <body>
     <header>
         <div class="logo-div">
-            <img src="./images/cap.png" alt="logo" class="logo-img">
+            <img src="./images/logo.png" alt="logo" class="logo-img">
             <h1>AwesomeCaps</h1>
         </div>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
@@ -17,15 +17,41 @@
         </label>
         <nav>
             <ul>
-                <li><a href="#">Featured</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="featured">
-            <h2>Lorem</h2>
+        <section class="hero" id='hero'>
+            <div class="container spacing">
+                <h2 class="hero-title">The best caps in the universe</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, sunt.</p>
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+        </section>
+        <section class="featured" id="featured">
+            <div class="container spacing">
+                <h2 class="subheader">Featured Products</h2>
+                <div class="row">
+                    <div class="featured-item">
+                        <a href="#"><img src="./images/just-a-cap.png" alt="a cool cap"></a>
+                        <span>$9.99</span>
+                    </div>
+                    <div class="featured-item">
+                        <a href=""><img src="./images/just-a-cap.png" alt="another cool cap"></a>
+                        <span>$9.99</span>
+                    </div>
+                    <div class="featured-item">
+                        <a href=""><img src="./images/just-a-cap.png" alt="an even better cap"></a>
+                        <span>$9.99</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <h2 class="subheader">Contact Us</h2>
         </section>
     </main>
     <footer>
