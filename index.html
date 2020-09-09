@@ -6,20 +6,20 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="logo-div">
-            <img src="./images/logo.png" alt="logo" class="logo-img">
+            <img src="./images/logo.png" alt="logo" class="logo-img" id="header-img">
             <h1>AwesomeCaps</h1>
         </div>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <label for="nav-toggle" class="nav-toggle-label">
             <span></span>
         </label>
-        <nav>
+        <nav id="nav-bar">
             <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#featured">Featured</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#featured" class="nav-link">Featured</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -50,13 +50,35 @@
                 </div>
             </div>
         </section>
-        <section class="contact" id="contact">
+        <section class="contact container spacing" id="contact">
             <h2 class="subheader">Contact Us</h2>
+            <form action="https://www.freecodecamp.com/email-submit" id="form" class="form-email">
+                <p>You can send us an e-mail using this form: </p>
+                <div class="form-item">
+                    <label for="name">
+                        Name: <input type="text" id="name" class="name-form">
+                    </label>
+                </div>
+                <div class="form-item">
+                    <label for="email">
+                        E-Mail: <input type="email" name="email" id="email" class="email-form" placeholder="john@example.com">
+                    </label>
+                </div>
+                <div class="form-item">
+                    <p>Tell us what you think or order here: </p>
+                    <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-item">
+                    <input type="submit" name="" id="submit" value="Send Email">
+                </div>
+            </form>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
         <p>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
     </footer>
     
+    <video src="https://www.youtube.com/watch?v=pN92rnO_n5U" id="video"></video>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
